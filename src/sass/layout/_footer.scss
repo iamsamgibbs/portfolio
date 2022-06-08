@@ -1,0 +1,102 @@
+@use "../abstracts" as *;
+
+.footer {
+  background-color: $black;
+  color: $white;
+
+  transition: margin 0.3s ease;
+
+  margin: 6em 0 0 0;
+
+  @include breakpoint-tablet {
+    margin: 4em 2em 0 2em;
+  }
+
+  @include breakpoint-desktop {
+    margin: 4em 3em 0 3em;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  &__to-top {
+    position: absolute;
+    top: -3rem;
+    transition: top 0.2s ease;
+
+    @include breakpoint-tablet {
+      top: -2rem;
+    }
+
+    &:hover {
+      top: -3.2em;
+
+      @include breakpoint-tablet {
+        top: -2.2rem;
+      }
+
+      svg {
+        filter: drop-shadow(0 -0.2rem 0rem rgba(0, 0, 0, 0.7));
+      }
+    }
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+      transform: rotateZ(180deg);
+      transition: filter 0.2s ease;
+
+      path {
+        fill: $primary;
+      }
+    }
+  }
+
+  &__socials {
+    margin: 0.5rem 0 0 0;
+    padding: 0;
+    display: flex;
+
+    @include breakpoint-tablet {
+      display: none;
+    }
+  }
+
+  &__social {
+    padding: 0 0.5em;
+
+    &:hover {
+      svg {
+        path,
+        polygon {
+          fill: $primary;
+        }
+      }
+    }
+
+    svg {
+      height: 1.5em;
+      width: 1.5em;
+
+      path,
+      polygon {
+        fill: $white;
+
+        transition: fill 0.2s ease;
+      }
+    }
+  }
+
+  a {
+    color: $white;
+  }
+
+  &__built {
+    margin: 0.5rem;
+  }
+}

@@ -1,0 +1,246 @@
+@use "../abstracts" as *;
+
+.projects {
+  $root: &;
+
+  padding: 0 1em 1em 1em;
+
+  max-width: 1500px;
+  margin: 8em auto 0 auto;
+
+  @include breakpoint-tablet {
+    padding: 0 5em 4em 5em;
+  }
+
+  @include breakpoint-desktop {
+    padding: 0 10em 2em 10em;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__header {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__text {
+    &--top-padding {
+      padding-top: 2rem;
+    }
+  }
+
+  &__tiles {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+
+    grid-template-columns: 1fr;
+
+    @include breakpoint-tablet {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint-desktop {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &__tile {
+    &--wide {
+      grid-column: 1 / span 2;
+    }
+    &--tall {
+      grid-row: 1 / span 2;
+    }
+    &--big {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+    }
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+
+    &:nth-child(even) {
+      #{$root}__image-overlay {
+        background: linear-gradient(38deg, pink, lightblue);
+        opacity: 0.4;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+
+      #{$root}__text-inner {
+        transform: rotateX(180deg);
+      }
+
+      #{$root}__image-overlay {
+        opacity: 0;
+      }
+
+      // #{$root}__text-front,
+      // #{$root}__text-back {
+      //   opacity: 1;
+      // }
+    }
+  }
+
+  &__tile-container {
+    height: 100%;
+    background: $white;
+    border-radius: 0.3em;
+    box-shadow: 0 0.2em 0.6em 0em $grey;
+    overflow: hidden;
+  }
+
+  &__tile-top {
+    height: 200px;
+    background: $grey;
+    border-radius: 0.3em 0.3em 0 0;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      min-width: 100%;
+    }
+  }
+
+  &__image-overlay {
+    @include absolute;
+    // background-color: $grey;
+    // opacity: 0.3;
+
+    background: linear-gradient(144deg, purple, orange);
+    opacity: 0.15;
+
+    transition: opacity 0.5s ease;
+  }
+
+  &__text-container {
+    @include absolute;
+    background-color: transparent;
+    perspective: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__text-inner {
+    position: relative;
+    text-align: center;
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+    width: 50%;
+    height: 50%;
+    pointer-events: none;
+  }
+
+  &__text-front,
+  &__text-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // opacity: 0.9;
+
+    // transition: opacity 0.5s ease;
+  }
+
+  &__text-front {
+    &::before {
+      content: "";
+      @include absolute(0, 0, -3em, 100%);
+      background: linear-gradient(to top left, white, 50%, transparent 51%);
+    }
+
+    &::after {
+      content: "";
+      @include absolute(0, 0, 100%, -3em);
+      background: linear-gradient(to bottom right, white, 50%, transparent 51%);
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 4.8vw;
+
+      @include breakpoint-tablet {
+        font-size: 2.1vw;
+      }
+
+      @media only screen and (min-width: $breakpoint-tablet) {
+        font-size: 1.5vw;
+      }
+
+      @media only screen and (min-width: 1685px) {
+        font-size: 1.2vw;
+      }
+
+      @media only screen and (min-width: 2000px) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__text-back {
+    transform: rotateX(180deg);
+
+    p {
+      text-transform: uppercase;
+    }
+
+    &::before {
+      content: "";
+      @include absolute(0, 0, -3em, 100%);
+      background: linear-gradient(to bottom left, white, 50%, transparent 51%);
+    }
+
+    &::after {
+      content: "";
+      @include absolute(0, 0, 100%, -3em);
+      background: linear-gradient(to top right, white, 50%, transparent 51%);
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__tile-bottom {
+    height: 100%;
+  }
+
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    background: $grey;
+  }
+
+  &__skill {
+    color: $black;
+    padding: 0 0.5rem;
+  }
+
+  &__short-description {
+    padding: 0.4em 0.4em;
+  }
+}

@@ -1,0 +1,140 @@
+@use "../abstracts" as *;
+
+.about {
+  padding: 1em 1em 0 1em;
+
+  max-width: 1500px;
+  margin: 0 auto;
+
+  @include breakpoint-tablet {
+    padding: 1em 5em 0 5em;
+  }
+
+  @include breakpoint-desktop {
+    padding: 1em 10em 0 10em;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include breakpoint-tablet {
+      flex-direction: row;
+    }
+
+    @include breakpoint-desktop {
+    }
+  }
+
+  &__header {
+    padding: 0 0 2em 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__container-left,
+  &__container-right {
+    width: 100%;
+
+    @include breakpoint-tablet {
+      width: 50%;
+    }
+  }
+
+  &__container-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__container-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 1em;
+
+    @include breakpoint-tablet {
+      justify-content: flex-end;
+      margin-top: 0;
+    }
+  }
+
+  &__carousel-container {
+    z-index: 1;
+    position: relative;
+    width: 95%;
+    max-width: 600px;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    background-color: $black;
+    clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%);
+  }
+
+  &__carousel-border {
+    @include absolute(0.5em, 0.5em, 0.5em, 0.5em);
+    overflow: hidden;
+    background-color: $black;
+    clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%);
+  }
+
+  &__carousel-hexagon {
+    clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%);
+    position: absolute;
+    width: 95%;
+    max-width: 600px;
+    aspect-ratio: 1/1;
+
+    &--1,
+    &--2 {
+      transition: transform 0.3s ease;
+    }
+
+    &--1 {
+      background-color: $primary;
+      transform: translate(10px, 10px);
+    }
+
+    &--2 {
+      background-color: $grey;
+      transform: translate(-10px, -10px);
+    }
+  }
+
+  &__image-container {
+    @include absolute;
+    transition: transform 0.5s ease;
+  }
+
+  &__image {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  &__video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0.2em;
+    color: $black;
+  }
+
+  &__skill {
+    padding: 0 1em;
+  }
+
+  &__description {
+    span {
+      font-weight: bold;
+      text-decoration: underline;
+      text-decoration-color: $primary;
+      text-decoration-thickness: 0.2rem;
+    }
+  }
+}

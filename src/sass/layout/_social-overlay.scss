@@ -1,0 +1,135 @@
+@use "../abstracts" as *;
+
+.social-overlay {
+  $root: &;
+
+  $transition-length: 0.3s;
+
+  @include absolute(0, 0, 0, 0, fixed);
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0;
+  z-index: 50;
+  pointer-events: none;
+
+  display: none;
+
+  transition: padding $transition-length ease;
+
+  @include breakpoint-tablet {
+    padding: 0 1rem;
+    display: flex;
+  }
+
+  @include breakpoint-desktop {
+    padding: 0 2rem;
+  }
+
+  &--not-top {
+    #{$root}__social {
+      svg {
+        height: 2rem;
+        width: 2rem;
+        filter: drop-shadow(0 0 0.3rem rgba(255, 255, 255, 0.7));
+
+        path {
+          fill: $black;
+        }
+      }
+    }
+
+    #{$root}__socials,
+    #{$root}__right {
+      &::after {
+        background-color: $black;
+        filter: drop-shadow(0 0 0rem rgba(255, 255, 255, 0.7));
+      }
+    }
+
+    #{$root}__email {
+      a {
+        color: $black;
+        text-shadow: 0 0 0.3rem rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+
+  &__socials {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: all;
+  }
+
+  &__social {
+    margin: 0.5rem 0;
+    transition: transform $transition-length ease;
+
+    &:hover {
+      transform: translateY(-0.2rem);
+      svg > path {
+        fill: $primary;
+      }
+    }
+
+    svg {
+      height: 2rem;
+      width: 2rem;
+      filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.7));
+      transition: filter $transition-length ease;
+
+      path {
+        transition: fill $transition-length ease;
+        fill: $white;
+      }
+    }
+  }
+
+  &__right {
+    padding: 0;
+    margin: 0;
+    width: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__socials,
+  &__right {
+    &::after {
+      content: "";
+      width: 2px;
+      height: 80px;
+      background-color: $white;
+      filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.7));
+
+      transition: background-color $transition-length ease,
+        filter $transition-length ease;
+    }
+  }
+
+  &__email {
+    a {
+      writing-mode: vertical-rl;
+      color: $white;
+      padding: 0.8rem 0;
+      text-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.7);
+
+      transition-property: color, text-shadow, transform;
+      transition-duration: $transition-length;
+      transition-timing-function: ease;
+      pointer-events: all;
+
+      &:hover {
+        transform: translateY(-0.2rem);
+        color: $primary;
+      }
+    }
+  }
+
+  &__test {
+    writing-mode: vertical-rl;
+  }
+}

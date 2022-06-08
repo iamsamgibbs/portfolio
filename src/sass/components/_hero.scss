@@ -1,0 +1,244 @@
+@use "../abstracts" as *;
+
+.hero {
+  $root: &;
+
+  height: 110vh;
+  max-height: 1600px;
+  position: relative;
+
+  &__background {
+    @include absolute;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+
+    &::before {
+      content: "";
+      @include absolute;
+      opacity: 0.35;
+      background: linear-gradient(
+        75deg,
+        red 0%,
+        transparent 15% 25%,
+        white 40% 60%,
+        transparent 75% 85%,
+        yellow 100%
+      );
+      background-size: 200% 100%;
+      animation: gradient-reverse 34s ease infinite;
+    }
+
+    &::after {
+      content: "";
+      @include absolute;
+      opacity: 0.25;
+      background: linear-gradient(
+        185deg,
+        red 0%,
+        transparent 15% 25%,
+        orange 40% 60%,
+        transparent 75% 85%,
+        yellow 100%
+      );
+      background-size: 100% 400%;
+      animation: gradient-vertical 46s ease infinite;
+    }
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes gradient-reverse {
+    0% {
+      background-position: 100% 0%;
+    }
+    50% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 0%;
+    }
+  }
+
+  @keyframes gradient-vertical {
+    0% {
+      background-position: 50% 0%;
+    }
+    50% {
+      background-position: 50% 100%;
+    }
+    100% {
+      background-position: 50% 0%;
+    }
+  }
+
+  &__content {
+    @include absolute;
+  }
+
+  &__content-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    transition: width 0.3s ease;
+
+    @include breakpoint-tablet {
+      width: 50%;
+    }
+
+    h1 {
+      background: white;
+      padding: 0.2em 1em;
+      margin: 0;
+      border-top: 0.1em solid black;
+      border-bottom: 0.1em solid black;
+      text-transform: uppercase;
+      font-size: 3em;
+      text-align: center;
+      position: relative;
+
+      &::before {
+        content: "";
+        @include absolute(0.25em, 0.25em, 0.2em, 0.2em);
+        border-left: 0.1em solid black;
+        border-right: 0.1em solid black;
+        pointer-events: none;
+      }
+    }
+
+    p {
+      padding: 0.3em 0.5em;
+      margin: 0;
+      background: white;
+      position: relative;
+      line-height: 1;
+
+      &::before {
+        content: "";
+        @include absolute(0, 0, -1.5em, 100%);
+        background: linear-gradient(
+          to bottom left,
+          white,
+          50%,
+          transparent 51%
+        );
+      }
+    }
+  }
+
+  &__content-left-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: -75%;
+    padding-bottom: 0;
+
+    @include breakpoint-tablet {
+      margin-top: initial;
+      padding-bottom: 10rem;
+    }
+  }
+
+  &__content-right {
+    @include absolute(0, 0, auto, 0);
+
+    transition: width 0.3s ease;
+
+    width: 95%;
+    pointer-events: none;
+
+    @include breakpoint-tablet {
+      width: 80%;
+    }
+
+    img {
+      height: 100%;
+      @include absolute(0, 0, auto, 0);
+
+      object-fit: contain;
+      object-position: bottom;
+    }
+  }
+
+  &__blend {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 20vh;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      hsla(0deg, 100%, 100%, 0.2) 30%,
+      white 100%
+    );
+  }
+
+  &__arrow {
+    @include absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 11vh;
+    animation: bobbing 4s ease infinite;
+    pointer-events: none;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+
+    a {
+      pointer-events: all;
+      svg {
+        width: 2rem;
+        height: 2rem;
+        filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.7));
+
+        path {
+          fill: $white;
+          transition: fill 0.2s ease;
+        }
+      }
+      &:hover {
+        svg {
+          path {
+            fill: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes bobbing {
+    0% {
+      padding-bottom: 11vh;
+    }
+
+    45% {
+      padding-bottom: 13vh;
+    }
+
+    55% {
+      padding-bottom: 13vh;
+    }
+
+    100% {
+      padding-bottom: 11vh;
+    }
+  }
+}

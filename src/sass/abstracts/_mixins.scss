@@ -1,0 +1,27 @@
+@use "./breakpoints" as *;
+
+@mixin breakpoint-mobile {
+  @media only screen and (min-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin breakpoint-tablet {
+  @media only screen and (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin breakpoint-desktop {
+  @media only screen and (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin absolute($top: 0, $bottom: 0, $left: 0, $right: 0, $position: absolute) {
+  position: $position;
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
+}
