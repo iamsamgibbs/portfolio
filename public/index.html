@@ -520,6 +520,7 @@
                     muted
                     loop
                     autoplay
+                    playsinline
                   ></video>
                 </div>
                 <div class="about__image-container">
@@ -538,6 +539,7 @@
                     muted
                     loop
                     autoplay
+                    playsinline
                   ></video>
                 </div>
                 <div class="about__image-container">
@@ -566,7 +568,12 @@
           <p class="contact__info">
             Please get in touch, I'm open to all opportunities!
           </p>
-          <form action="" class="contact__form">
+          <form
+            name="contact"
+            method="POST"
+            class="contact__form"
+            data-netlify="true"
+          >
             <div class="contact__form-row">
               <div class="contact__input-group">
                 <input
