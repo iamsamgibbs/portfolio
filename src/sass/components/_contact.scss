@@ -1,17 +1,17 @@
 @use "../abstracts" as *;
 
 .contact {
-  padding: 3em 1em 0 1em;
+  padding: 1em 1em 0 1em;
 
   max-width: 1500px;
   margin: 0 auto;
 
   @include breakpoint-tablet {
-    padding: 6em 5em 0 5em;
+    padding: 1em 5em 0 5em;
   }
 
   @include breakpoint-desktop {
-    padding: 8em 10em 0 10em;
+    padding: 1em 10em 0 10em;
   }
 
   &__container {

@@ -22,12 +22,12 @@ const projects = [
     links: [
       {
         type: "github",
-        url: "https://github.com/03gibbss/twitch-raid-checker-react",
+        url: "https://github.com/iamsamgibbs/twitch-raid-checker-react",
       },
       { type: "external", url: "https://twitch-raid-checker.netlify.app/" },
     ],
     technologies: ["React", "Authentication", "API", "Git", "Material UI"],
-    description: `A react app utilising the <span>Twitch API</span> designed to allow streamers to see which of their followers are currently streaming.<br><br>The user <span>authenticates with the twitch account</span>, the app requests a list of users who follow the logged in user, then requests "stream" data for each user to check which users are currently live, then displays these in a list sorted by most viewers to least viewers. I implemented an <span>OAuth implicit code flow</span> to interact with the Twitch API directly from the React app. The app makes <span>multiple API requests</span>, manipulates the return data before making further requests. Some data is <span>persisted in local storage</span> to reduce the number of API calls on a page reload.<br><br>The React App is <span>hosted on Netlify</span>. I began to implement Netlify functions to include an example screen which makes requests to twitch from a developer account rather than the user's own account. However, I realised some of the functions would take too long to complete to run as a Netlify function on their free tier. I instead implemented similar functionality with a <span>node app deployed on Heroku</span>: <a href="https://github.com/03gibbss/twitch-raid-checker-backend" target="_blank">(View node code here)</a>.<br><br>Using material UI for the interface. It was designed with a minimalist interface in mind to provide just the necessary information for the streamer.`,
+    description: `A react app utilising the <span>Twitch API</span> designed to allow streamers to see which of their followers are currently streaming.<br><br>The user <span>authenticates with the twitch account</span>, the app requests a list of users who follow the logged in user, then requests "stream" data for each user to check which users are currently live, then displays these in a list sorted by most viewers to least viewers. I implemented an <span>OAuth implicit code flow</span> to interact with the Twitch API directly from the React app. The app makes <span>multiple API requests</span>, manipulates the return data before making further requests. Some data is <span>persisted in local storage</span> to reduce the number of API calls on a page reload.<br><br>The React App is <span>hosted on Netlify</span>. I began to implement Netlify functions to include an example screen which makes requests to twitch from a developer account rather than the user's own account. However, I realised some of the functions would take too long to complete to run as a Netlify function on their free tier. I instead implemented similar functionality with a <span>node app deployed on Heroku</span>: <a href="https://github.com/iamsamgibbs/twitch-raid-checker-backend" target="_blank">(View node code here)</a>.<br><br>Using material UI for the interface. It was designed with a minimalist interface in mind to provide just the necessary information for the streamer.`,
   },
   {
     image: "./images/Remix Auth Twitch Full.webp",
@@ -35,7 +35,10 @@ const projects = [
     title: "Remix Auth Twitch",
     param: "remix-auth-twitch",
     links: [
-      { type: "github", url: "https://github.com/03gibbss/remix-auth-twitch" },
+      {
+        type: "github",
+        url: "https://github.com/iamsamgibbs/remix-auth-twitch",
+      },
       {
         type: "external",
         url: "https://www.npmjs.com/package/@03gibbss/remix-auth-twitch",
@@ -52,11 +55,11 @@ const projects = [
     links: [
       {
         type: "github",
-        url: "https://github.com/03gibbss/Bingo-Stream-Server",
+        url: "https://github.com/iamsamgibbs/Bingo-Stream-Server",
       },
       {
         type: "github",
-        url: "https://github.com/03gibbss/Bingo-Stream-Frontend",
+        url: "https://github.com/iamsamgibbs/Bingo-Stream-Frontend",
       },
     ],
     technologies: ["React", "Node.js", "Websockets", "Git", "Bootstrap"],
@@ -70,11 +73,11 @@ const projects = [
     links: [
       {
         type: "github",
-        url: "https://github.com/03gibbss/my-component-library",
+        url: "https://github.com/iamsamgibbs/my-component-library",
       },
       {
         type: "external",
-        url: "https://github.com/03gibbss/my-component-library/packages/1326433",
+        url: "https://github.com/iamsamgibbs/my-component-library/packages/1326433",
       },
     ],
     technologies: ["React", "TypeScript", "SCSS", "Storybook", "Jest", "Git"],
@@ -88,11 +91,11 @@ const projects = [
     links: [
       {
         type: "github",
-        url: "https://github.com/03gibbss/musicbee-web-interface-backend",
+        url: "https://github.com/iamsamgibbs/musicbee-web-interface-backend",
       },
       {
         type: "github",
-        url: "https://github.com/03gibbss/MusicBee-web-interface-frontend",
+        url: "https://github.com/iamsamgibbs/MusicBee-web-interface-frontend",
       },
     ],
     technologies: ["React", "Node.js", "Websockets", "Git", "CSS"],
@@ -104,7 +107,10 @@ const projects = [
     title: "Companion Enhanced",
     param: "companion-enhanced",
     links: [
-      { type: "github", url: "https://github.com/03gibbss/companion-enhanced" },
+      {
+        type: "github",
+        url: "https://github.com/iamsamgibbs/companion-enhanced",
+      },
     ],
     technologies: ["React", "Node.js", "Git", "Bootstraph"],
     description: `A stream broadcast tool to <span>trigger stream actions from multiple machines</span> on the same network.<br><br>Companion is a piece of software to control multiple broadcast devices and software via a hardware control panel with buttons to trigger commands. The main limitation of the software is that it can only be controlled from the machine it is running on - however it is also possible to <span>trigger these commands via HTTP requests.</span><br><br>This app provides remote control of companion by recieving HTTP requests from other machines on the same network and sending HTTP requests onto the main companion instance. It is designed to work with 4 remote machines (also running companion to send HTTP requests to the app). It features a <span>react frontend which allows for configuration of the app</span> to set which commands are available remotely and the button text for each command. When the app recieves a HTTP request from the one of the remote clients it determines which command to run on the main instance.`,
@@ -145,6 +151,11 @@ const aboutHexagonContainer = document.querySelector(
 
 const aboutHexagonOne = document.querySelector(".about__carousel-hexagon--1");
 const aboutHexagonTwo = document.querySelector(".about__carousel-hexagon--2");
+
+const showreel = document.querySelector(".showreel");
+const showreelPlay = showreel.querySelector(".showreel__play");
+const showreelImageContainer = showreel.querySelector(".showreel__image");
+const showreelVideoContainer = showreel.querySelector(".showreel__video");
 
 // UTILITY FUNCTIONS
 
@@ -452,4 +463,21 @@ let projectId = projects.findIndex((el) => {
 
 if (projectId !== -1) {
   openModal(projectId);
+}
+
+//SHOWREEL VIDEO
+window.addEventListener("click", ({ target }) => {
+  if (target.closest(".showreel__play")) {
+    playShowreelVideo();
+  }
+});
+
+function playShowreelVideo() {
+  showreelPlay.classList.add("showreel__play--hidden");
+  showreelImageContainer.classList.add("showreel__image--hidden");
+  showreelVideoContainer.classList.add("showreel__video--visible");
+
+  const video = showreelVideoContainer.children[0];
+
+  video.play();
 }

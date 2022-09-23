@@ -16,6 +16,23 @@
     padding: 0 10em 2em 10em;
   }
 
+  &--small-spacing {
+    padding: 3em 1em 0 1em;
+    margin: 0 auto;
+
+    @include breakpoint-tablet {
+      padding: 6em 5em 0 5em;
+    }
+
+    @include breakpoint-desktop {
+      padding: 8em 10em 0 10em;
+    }
+
+    #{$root}__header {
+      margin-bottom: 1em;
+    }
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -241,6 +258,140 @@
   }
 
   &__short-description {
+    padding: 0.4em 0.4em;
+  }
+
+  &__project {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    @include breakpoint-tablet {
+      grid-template-columns: 1fr;
+    }
+
+    @include breakpoint-desktop {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__image-container {
+    width: 100%;
+    text-align: center;
+
+    img {
+      height: auto;
+      margin: 0 auto;
+    }
+
+    iframe {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &__content {
+    justify-self: left;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__description {
+  }
+
+  a {
+    font-weight: bold;
+    color: $black;
+    text-decoration: underline;
+    text-decoration-color: $primary;
+    text-decoration-thickness: 0.2rem;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  audio {
+    margin-top: 0.4rem;
+    width: 100%;
+  }
+
+  &__music-tiles {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: grid;
+    margin-top: 2rem;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+
+    grid-template-columns: 1fr;
+
+    @include breakpoint-tablet {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint-desktop {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &__music-tile {
+    &--wide {
+      grid-column: 1 / span 2;
+    }
+    &--tall {
+      grid-row: 1 / span 2;
+    }
+    &--big {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+    }
+  }
+
+  &__music-tile-container {
+    height: 100%;
+    background: $white;
+    border-radius: 0.3em;
+    box-shadow: 0 0.2em 0.6em 0em $grey;
+    overflow: hidden;
+  }
+
+  &__music-tile-top {
+    height: 200px;
+    background: $grey;
+    border-radius: 0.3em 0.3em 0 0;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      min-width: 100%;
+    }
+
+    iframe {
+      object-fit: cover;
+      height: 100%;
+      min-width: 100%;
+      width: auto;
+    }
+  }
+
+  &__music-tile-header {
+    background: $grey;
+    padding: 0.4em 0.4em;
+  }
+
+  &__music-tile-description {
     padding: 0.4em 0.4em;
   }
 }
