@@ -153,9 +153,11 @@ const aboutHexagonOne = document.querySelector(".about__carousel-hexagon--1");
 const aboutHexagonTwo = document.querySelector(".about__carousel-hexagon--2");
 
 const showreel = document.querySelector(".showreel");
-const showreelPlay = showreel.querySelector(".showreel__play");
-const showreelImageContainer = showreel.querySelector(".showreel__image");
-const showreelVideoContainer = showreel.querySelector(".showreel__video");
+if (showreel !== null) {
+  const showreelPlay = showreel.querySelector(".showreel__play");
+  const showreelImageContainer = showreel.querySelector(".showreel__image");
+  const showreelVideoContainer = showreel.querySelector(".showreel__video");
+}
 
 // UTILITY FUNCTIONS
 
