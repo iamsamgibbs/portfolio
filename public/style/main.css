@@ -80,8 +80,8 @@ select {
     scroll-behavior: auto;
   }
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     -webkit-animation-duration: 0.01ms !important;
             animation-duration: 0.01ms !important;
     -webkit-animation-iteration-count: 1 !important;
@@ -97,7 +97,7 @@ body {
 
 p {
   margin-bottom: 1.3em;
-  color: hsl(0deg, 0%, 0%);
+  color: hsl(0, 0%, 0%);
   line-height: 2;
 }
 
@@ -113,10 +113,10 @@ h5 {
 }
 @media (max-width: 768px) {
   h1,
-h2,
-h3,
-h4,
-h5 {
+  h2,
+  h3,
+  h4,
+  h5 {
     line-height: 1.4em;
   }
 }
@@ -193,10 +193,10 @@ blockquote {
   font-size: 1em;
   position: relative;
   line-height: 1.3em;
-  border-left: 4px solid hsl(35deg, 100%, 50%);
+  border-left: 4px solid hsl(35, 100%, 50%);
   padding: 10px 0 10px 20px;
   margin: 20px 0;
-  color: hsl(0deg, 0%, 0%);
+  color: hsl(0, 0%, 0%);
 }
 
 cite {
@@ -306,7 +306,7 @@ a {
   max-width: 600px;
   aspect-ratio: 1/1;
   overflow: hidden;
-  background-color: hsl(0deg, 0%, 0%);
+  background-color: hsl(0, 0%, 0%);
   -webkit-clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%);
           clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%);
 }
@@ -317,7 +317,7 @@ a {
   left: 0.5em;
   right: 0.5em;
   overflow: hidden;
-  background-color: hsl(0deg, 0%, 0%);
+  background-color: hsl(0, 0%, 0%);
   -webkit-clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%);
           clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%);
 }
@@ -336,12 +336,12 @@ a {
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 .about__carousel-hexagon--1 {
-  background-color: hsl(35deg, 100%, 50%);
+  background-color: hsl(35, 100%, 50%);
   -webkit-transform: translate(10px, 10px);
           transform: translate(10px, 10px);
 }
 .about__carousel-hexagon--2 {
-  background-color: hsl(0deg, 0%, 84%);
+  background-color: hsl(0, 0%, 84%);
   -webkit-transform: translate(-10px, -10px);
           transform: translate(-10px, -10px);
 }
@@ -374,7 +374,7 @@ a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 0 0.2em;
-  color: hsl(0deg, 0%, 0%);
+  color: hsl(0, 0%, 0%);
 }
 .about__skill {
   padding: 0 1em;
@@ -382,20 +382,18 @@ a {
 .about__description span {
   font-weight: bold;
   text-decoration: underline;
-  -webkit-text-decoration-color: hsl(35deg, 100%, 50%);
-          text-decoration-color: hsl(35deg, 100%, 50%);
+  text-decoration-color: hsl(35, 100%, 50%);
   text-decoration-thickness: 0.2rem;
 }
 .about a {
   font-weight: bold;
-  color: hsl(0deg, 0%, 0%);
+  color: hsl(0, 0%, 0%);
   text-decoration: underline;
-  -webkit-text-decoration-color: hsl(35deg, 100%, 50%);
-          text-decoration-color: hsl(35deg, 100%, 50%);
+  text-decoration-color: hsl(35, 100%, 50%);
   text-decoration-thickness: 0.2rem;
 }
 .about a:hover {
-  color: hsl(35deg, 100%, 50%);
+  color: hsl(35, 100%, 50%);
 }
 
 .contact {
@@ -475,9 +473,9 @@ a {
   padding: 0.3em 0.3em 0.3em 0.5em;
   width: 100%;
   outline: none;
-  border: 0.1em solid hsl(0deg, 0%, 0%);
-  -webkit-box-shadow: inset 0px 0px 0px 0em hsl(0deg, 0%, 0%);
-          box-shadow: inset 0px 0px 0px 0em hsl(0deg, 0%, 0%);
+  border: 0.1em solid hsl(0, 0%, 0%);
+  -webkit-box-shadow: inset 0px 0px 0px 0em hsl(0, 0%, 0%);
+          box-shadow: inset 0px 0px 0px 0em hsl(0, 0%, 0%);
   -webkit-transition: border 0.2s ease, -webkit-box-shadow 0.2s ease;
   transition: border 0.2s ease, -webkit-box-shadow 0.2s ease;
   transition: box-shadow 0.2s ease, border 0.2s ease;
@@ -485,19 +483,19 @@ a {
 }
 .contact__input-group input:not(.hide-validation):invalid,
 .contact__input-group textarea:not(.hide-validation):invalid {
-  border-color: hsl(0deg, 57%, 48%);
-  -webkit-box-shadow: inset 0px 0px 0px 0.1em hsl(0deg, 57%, 48%);
-          box-shadow: inset 0px 0px 0px 0.1em hsl(0deg, 57%, 48%);
+  border-color: hsl(0, 57%, 48%);
+  -webkit-box-shadow: inset 0px 0px 0px 0.1em hsl(0, 57%, 48%);
+          box-shadow: inset 0px 0px 0px 0.1em hsl(0, 57%, 48%);
 }
 .contact__input-group input:not(.hide-validation):invalid ~ label,
 .contact__input-group textarea:not(.hide-validation):invalid ~ label {
-  color: hsl(0deg, 57%, 48%);
+  color: hsl(0, 57%, 48%);
 }
 .contact__input-group input:focus,
 .contact__input-group textarea:focus {
-  border-color: hsl(35deg, 100%, 50%);
-  -webkit-box-shadow: inset 0px 0px 0px 0.1em hsl(35deg, 100%, 50%);
-          box-shadow: inset 0px 0px 0px 0.1em hsl(35deg, 100%, 50%);
+  border-color: hsl(35, 100%, 50%);
+  -webkit-box-shadow: inset 0px 0px 0px 0.1em hsl(35, 100%, 50%);
+          box-shadow: inset 0px 0px 0px 0.1em hsl(35, 100%, 50%);
 }
 .contact__textarea {
   resize: none;
@@ -508,22 +506,22 @@ a {
   transition: color 0.2s ease;
 }
 .contact__submit {
-  border: 0.1em solid hsl(0deg, 0%, 0%);
+  border: 0.1em solid hsl(0, 0%, 0%);
   border-radius: 0.5em;
   padding: 0 1em;
   margin-top: 0.5em;
   margin-left: 0.25em;
   margin-right: 0.25em;
   font-size: 1.5em;
-  background-color: hsl(255deg, 100%, 100%);
-  color: hsl(0deg, 0%, 0%);
+  background-color: hsl(255, 100%, 100%);
+  color: hsl(0, 0%, 0%);
   cursor: pointer;
   -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 .contact__submit:hover {
-  background-color: hsl(35deg, 100%, 70%);
-  color: hsl(255deg, 100%, 100%);
+  background-color: hsl(35, 100%, 70%);
+  color: hsl(255, 100%, 100%);
 }
 
 .hero {
@@ -759,8 +757,8 @@ a {
   right: 0;
   bottom: 0;
   height: 20vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(30%, hsla(0deg, 100%, 100%, 0.2)), to(white));
-  background: linear-gradient(180deg, transparent 0%, hsla(0deg, 100%, 100%, 0.2) 30%, white 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(30%, hsla(0, 100%, 100%, 0.2)), to(white));
+  background: linear-gradient(180deg, transparent 0%, hsla(0, 100%, 100%, 0.2) 30%, white 100%);
 }
 .hero__arrow {
   position: absolute;
@@ -796,12 +794,12 @@ a {
           filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.7));
 }
 .hero__arrow a svg path {
-  fill: hsl(255deg, 100%, 100%);
+  fill: hsl(255, 100%, 100%);
   -webkit-transition: fill 0.2s ease;
   transition: fill 0.2s ease;
 }
 .hero__arrow a:hover svg path {
-  fill: hsl(35deg, 100%, 50%);
+  fill: hsl(35, 100%, 50%);
 }
 @-webkit-keyframes bobbing {
   0% {
@@ -937,15 +935,15 @@ a {
 }
 .projects__tile-container {
   height: 100%;
-  background: hsl(255deg, 100%, 100%);
+  background: hsl(255, 100%, 100%);
   border-radius: 0.3em;
-  -webkit-box-shadow: 0 0.2em 0.6em 0em hsl(0deg, 0%, 84%);
-          box-shadow: 0 0.2em 0.6em 0em hsl(0deg, 0%, 84%);
+  -webkit-box-shadow: 0 0.2em 0.6em 0em hsl(0, 0%, 84%);
+          box-shadow: 0 0.2em 0.6em 0em hsl(0, 0%, 84%);
   overflow: hidden;
 }
 .projects__tile-top {
   height: 200px;
-  background: hsl(0deg, 0%, 84%);
+  background: hsl(0, 0%, 84%);
   border-radius: 0.3em 0.3em 0 0;
   position: relative;
   overflow: hidden;
@@ -1005,7 +1003,7 @@ a {
   position: absolute;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
-  background-color: hsl(255deg, 100%, 100%);
+  background-color: hsl(255, 100%, 100%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1101,10 +1099,10 @@ a {
       flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  background: hsl(0deg, 0%, 84%);
+  background: hsl(0, 0%, 84%);
 }
 .projects__skill {
-  color: hsl(0deg, 0%, 0%);
+  color: hsl(0, 0%, 0%);
   padding: 0 0.5rem;
 }
 .projects__short-description {
@@ -1151,14 +1149,13 @@ a {
 }
 .projects a {
   font-weight: bold;
-  color: hsl(0deg, 0%, 0%);
+  color: hsl(35, 100%, 50%);
   text-decoration: underline;
-  -webkit-text-decoration-color: hsl(35deg, 100%, 50%);
-          text-decoration-color: hsl(35deg, 100%, 50%);
+  text-decoration-color: hsl(0, 0%, 0%);
   text-decoration-thickness: 0.2rem;
 }
 .projects a:hover {
-  color: hsl(35deg, 100%, 50%);
+  color: hsl(35, 100%, 50%);
 }
 .projects audio {
   margin-top: 0.4rem;
@@ -1197,15 +1194,15 @@ a {
 }
 .projects__music-tile-container {
   height: 100%;
-  background: hsl(255deg, 100%, 100%);
+  background: hsl(255, 100%, 100%);
   border-radius: 0.3em;
-  -webkit-box-shadow: 0 0.2em 0.6em 0em hsl(0deg, 0%, 84%);
-          box-shadow: 0 0.2em 0.6em 0em hsl(0deg, 0%, 84%);
+  -webkit-box-shadow: 0 0.2em 0.6em 0em hsl(0, 0%, 84%);
+          box-shadow: 0 0.2em 0.6em 0em hsl(0, 0%, 84%);
   overflow: hidden;
 }
 .projects__music-tile-top {
   height: 200px;
-  background: hsl(0deg, 0%, 84%);
+  background: hsl(0, 0%, 84%);
   border-radius: 0.3em 0.3em 0 0;
   position: relative;
   overflow: hidden;
@@ -1224,7 +1221,7 @@ a {
   width: auto;
 }
 .projects__music-tile-header {
-  background: hsl(0deg, 0%, 84%);
+  background: hsl(0, 0%, 84%);
   padding: 0.4em 0.4em;
 }
 .projects__music-tile-description {
@@ -1295,7 +1292,7 @@ a {
           transform: scale(1.1);
 }
 .showreel__play:hover svg path {
-  fill: hsl(35deg, 100%, 50%);
+  fill: hsl(35, 100%, 50%);
 }
 .showreel__play svg {
   top: calc(50% - 2.5rem);
@@ -1313,7 +1310,7 @@ a {
 .showreel__play svg path {
   -webkit-transition: fill 0.2s ease;
   transition: fill 0.2s ease;
-  fill: hsl(255deg, 100%, 100%);
+  fill: hsl(255, 100%, 100%);
 }
 .showreel__image {
   height: 100%;
@@ -1340,8 +1337,8 @@ a {
 }
 
 .footer {
-  background-color: hsl(0deg, 0%, 0%);
-  color: hsl(255deg, 100%, 100%);
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(255, 100%, 100%);
   -webkit-transition: margin 0.3s ease;
   transition: margin 0.3s ease;
   margin: 6em 0 0 0;
@@ -1406,7 +1403,7 @@ a {
   transition: filter 0.2s ease, -webkit-filter 0.2s ease;
 }
 .footer__to-top svg path {
-  fill: hsl(35deg, 100%, 50%);
+  fill: hsl(35, 100%, 50%);
 }
 .footer__socials {
   margin: 0.5rem 0 0 0;
@@ -1425,7 +1422,7 @@ a {
 }
 .footer__social:hover svg path,
 .footer__social:hover svg polygon {
-  fill: hsl(35deg, 100%, 50%);
+  fill: hsl(35, 100%, 50%);
 }
 .footer__social svg {
   height: 1.5em;
@@ -1433,12 +1430,12 @@ a {
 }
 .footer__social svg path,
 .footer__social svg polygon {
-  fill: hsl(255deg, 100%, 100%);
+  fill: hsl(255, 100%, 100%);
   -webkit-transition: fill 0.2s ease;
   transition: fill 0.2s ease;
 }
 .footer a {
-  color: hsl(255deg, 100%, 100%);
+  color: hsl(255, 100%, 100%);
 }
 .footer__built {
   margin: 0.5rem;
@@ -1472,7 +1469,7 @@ a {
 .modal__mask {
   width: 100%;
   height: 100%;
-  background-color: hsla(0deg, 0%, 0%, 0.4);
+  background-color: hsla(0, 0%, 0%, 0.4);
   opacity: 0;
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
@@ -1484,7 +1481,7 @@ a {
   width: 100%;
   height: 100%;
   max-width: 1024px;
-  background-color: hsl(255deg, 100%, 100%);
+  background-color: hsl(255, 100%, 100%);
   opacity: 0;
   -ms-flex-item-align: center;
       align-self: center;
@@ -1537,7 +1534,7 @@ a {
   content: "";
   position: absolute;
   top: 0.1rem;
-  background-color: hsl(0deg, 0%, 0%);
+  background-color: hsl(0, 0%, 0%);
   height: 3rem;
   width: 0.2rem;
   -webkit-transition: background-color 0.1s ease;
@@ -1552,7 +1549,7 @@ a {
           transform: rotateZ(-45deg);
 }
 .modal__close:hover::before, .modal__close:hover::after {
-  background-color: hsl(35deg, 100%, 50%);
+  background-color: hsl(35, 100%, 50%);
 }
 .modal__play {
   position: absolute;
@@ -1579,7 +1576,7 @@ a {
           transform: scale(1.1);
 }
 .modal__play:hover svg path {
-  fill: hsl(35deg, 100%, 50%);
+  fill: hsl(35, 100%, 50%);
 }
 .modal__play svg {
   top: calc(50% - 2.5rem);
@@ -1597,7 +1594,7 @@ a {
 .modal__play svg path {
   -webkit-transition: fill 0.2s ease;
   transition: fill 0.2s ease;
-  fill: hsl(255deg, 100%, 100%);
+  fill: hsl(255, 100%, 100%);
 }
 .modal__image {
   height: 100%;
@@ -1648,15 +1645,15 @@ a {
 }
 .modal__link svg path,
 .modal__link svg rect {
-  fill: hsl(0deg, 0%, 0%);
+  fill: hsl(0, 0%, 0%);
   -webkit-transition: fill 0.2s ease;
   transition: fill 0.2s ease;
 }
 .modal__link svg:hover path {
-  fill: hsl(35deg, 100%, 50%);
+  fill: hsl(35, 100%, 50%);
 }
 .modal__link svg:hover rect {
-  fill: hsl(35deg, 100%, 50%);
+  fill: hsl(35, 100%, 50%);
 }
 .modal__technologies {
   display: -webkit-box;
@@ -1666,7 +1663,7 @@ a {
       flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  background-color: hsl(0deg, 0%, 84%);
+  background-color: hsl(0, 0%, 84%);
 }
 .modal__technology {
   padding: 0 1rem;
@@ -1679,15 +1676,14 @@ a {
 .modal__description span {
   font-weight: bold;
   text-decoration: underline;
-  -webkit-text-decoration-color: hsl(35deg, 100%, 50%);
-          text-decoration-color: hsl(35deg, 100%, 50%);
+  text-decoration-color: hsl(35, 100%, 50%);
   text-decoration-thickness: 0.2rem;
 }
 
 .navbar {
   z-index: 100;
   padding: 1em 1em 0 1em;
-  color: hsl(255deg, 100%, 100%);
+  color: hsl(255, 100%, 100%);
   position: fixed;
   width: 100%;
   -webkit-transition-property: background-color, border-bottom, padding, -webkit-backdrop-filter, -webkit-transform;
@@ -1714,10 +1710,10 @@ a {
   }
 }
 .navbar--not-top {
-  background-color: hsla(0deg, 0%, 0%, 0.75);
+  background-color: hsla(0, 0%, 0%, 0.75);
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
-  border-bottom: 0.2em solid hsl(255deg, 100%, 100%);
+  border-bottom: 0.2em solid hsl(255, 100%, 100%);
   padding: 0 1em;
 }
 @media only screen and (min-width: 768px) {
@@ -1772,15 +1768,15 @@ a {
   padding: 0 0.5em;
 }
 .navbar__menu-item--resume a, .navbar__mobile-menu-item--resume a {
-  border: 0.1em solid hsl(255deg, 100%, 100%);
+  border: 0.1em solid hsl(255, 100%, 100%);
   border-radius: 0.5em;
   padding: 0 0.5em;
   -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 .navbar__menu-item--resume a:hover, .navbar__mobile-menu-item--resume a:hover {
-  background-color: hsl(255deg, 100%, 100%);
-  color: hsl(0deg, 0%, 0%);
+  background-color: hsl(255, 100%, 100%);
+  color: hsl(0, 0%, 0%);
 }
 .navbar__menu-item:not(.navbar__menu-item--resume) a:hover::after, .navbar__mobile-menu-item:not(.navbar__mobile-menu-item--resume) a:hover::after {
   width: 100%;
@@ -1794,11 +1790,11 @@ a {
   right: 0;
   -webkit-transition: width 0.3s ease;
   transition: width 0.3s ease;
-  background-color: hsl(255deg, 100%, 100%);
+  background-color: hsl(255, 100%, 100%);
   width: 0%;
 }
 .navbar a {
-  color: hsl(255deg, 100%, 100%);
+  color: hsl(255, 100%, 100%);
   font-size: 1.5em;
   position: relative;
 }
@@ -1883,14 +1879,14 @@ a {
   margin-right: 0.5rem;
 }
 .navbar .navbar__mobile-button--open:hover::before, .navbar .navbar__mobile-button--open:hover::after {
-  background-color: hsl(35deg, 100%, 50%);
+  background-color: hsl(35, 100%, 50%);
 }
 .navbar .navbar__mobile-button--open::before, .navbar .navbar__mobile-button--open::after {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
-  background-color: hsl(255deg, 100%, 100%);
+  background-color: hsl(255, 100%, 100%);
   width: 2rem;
   height: 0.2rem;
   -webkit-transition: background-color 0.1s ease;
@@ -1908,7 +1904,7 @@ a {
   content: "";
   position: absolute;
   top: 0;
-  background-color: hsl(255deg, 100%, 100%);
+  background-color: hsl(255, 100%, 100%);
   height: 3rem;
   width: 0.2rem;
   -webkit-transition: background-color 0.1s ease;
@@ -1923,7 +1919,7 @@ a {
           transform: rotateZ(-45deg);
 }
 .navbar .navbar__mobile-button--close:hover::before, .navbar .navbar__mobile-button--close:hover::after {
-  background-color: hsl(35deg, 100%, 50%);
+  background-color: hsl(35, 100%, 50%);
 }
 
 .social-overlay {
@@ -1965,16 +1961,16 @@ a {
           filter: drop-shadow(0 0 0.3rem rgba(255, 255, 255, 0.7));
 }
 .social-overlay--not-top .social-overlay__social svg path {
-  fill: hsl(0deg, 0%, 0%);
+  fill: hsl(0, 0%, 0%);
 }
 .social-overlay--not-top .social-overlay__socials::after,
 .social-overlay--not-top .social-overlay__right::after {
-  background-color: hsl(0deg, 0%, 0%);
+  background-color: hsl(0, 0%, 0%);
   -webkit-filter: drop-shadow(0 0 0rem rgba(255, 255, 255, 0.7));
           filter: drop-shadow(0 0 0rem rgba(255, 255, 255, 0.7));
 }
 .social-overlay--not-top .social-overlay__email a {
-  color: hsl(0deg, 0%, 0%);
+  color: hsl(0, 0%, 0%);
   text-shadow: 0 0 0.3rem rgba(255, 255, 255, 0.7);
 }
 .social-overlay__socials {
@@ -2004,7 +2000,7 @@ a {
           transform: translateY(-0.2rem);
 }
 .social-overlay__social:hover svg path {
-  fill: hsl(35deg, 100%, 50%);
+  fill: hsl(35, 100%, 50%);
 }
 .social-overlay__social svg {
   height: 2rem;
@@ -2019,7 +2015,7 @@ a {
 .social-overlay__social svg path {
   -webkit-transition: fill 0.3s ease;
   transition: fill 0.3s ease;
-  fill: hsl(255deg, 100%, 100%);
+  fill: hsl(255, 100%, 100%);
 }
 .social-overlay__right {
   padding: 0;
@@ -2040,7 +2036,7 @@ a {
   content: "";
   width: 2px;
   height: 80px;
-  background-color: hsl(255deg, 100%, 100%);
+  background-color: hsl(255, 100%, 100%);
   -webkit-filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.7));
           filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.7));
   -webkit-transition: background-color 0.3s ease, -webkit-filter 0.3s ease;
@@ -2052,7 +2048,7 @@ a {
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
-  color: hsl(255deg, 100%, 100%);
+  color: hsl(255, 100%, 100%);
   padding: 0.8rem 0;
   text-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.7);
   -webkit-transition-property: color, text-shadow, -webkit-transform;
@@ -2068,7 +2064,7 @@ a {
 .social-overlay__email a:hover {
   -webkit-transform: translateY(-0.2rem);
           transform: translateY(-0.2rem);
-  color: hsl(35deg, 100%, 50%);
+  color: hsl(35, 100%, 50%);
 }
 .social-overlay__test {
   -webkit-writing-mode: vertical-rl;
