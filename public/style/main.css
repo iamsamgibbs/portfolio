@@ -1155,7 +1155,7 @@ a {
   text-decoration-thickness: 0.2rem;
 }
 .projects a:hover {
-  color: hsl(35, 100%, 50%);
+  color: hsl(0, 0%, 0%);
 }
 .projects audio {
   margin-top: 0.4rem;
